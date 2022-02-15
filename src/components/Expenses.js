@@ -4,7 +4,6 @@ import './Expenses.css';
 function Expenses(props) {
 	const expenses = props.items
 	// iterate through each object
-	console.table(expenses);
 	const listItems = expenses.map((item) => {
 		return (
 			<ExpenseItem
