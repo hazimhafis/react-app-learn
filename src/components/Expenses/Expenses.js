@@ -12,7 +12,7 @@ const Expenses = (props) => {
 	const filterChangeHandler = selectedYear => {
 		setFilteredYear(selectedYear);
 	};
-	
+
 	// iterate through each object
 	const listItems = expenses.map((item) => {
 		return (
@@ -28,10 +28,19 @@ const Expenses = (props) => {
 	return (
 		<div>
 			<Card className='expenses'>
-				<ExpensesFilter 
-					selected={filteredYear} 
+				<ExpensesFilter
+					selected={filteredYear}
 					onChangeFilter={filterChangeHandler}
 				/>
+				{/* another method of outputting list of items */}
+				{/* {props.items.map((expense) => (
+					<ExpenseItem
+						key={expense.id}
+						title={expense.title}
+						amount={expense.amount}
+						date={expense.date}
+					/>
+				))} */}
 				{listItems}
 			</Card>
 		</div>
